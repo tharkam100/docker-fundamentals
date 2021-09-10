@@ -33,11 +33,14 @@ docker exec -it <container-name> /bin/sh
 
 By default docker exec command runs in the same working directory set when container was created.
 
-docker exec -it ubuntu_bash pwd
-
+```
+docker exec -it <container-name> /bin/sh pwd
+```
 You can select working directory for the command to execute into
-
-docker exec -it -w /root ubuntu_bash pwd
+```
+docker exec -it -w /root <container-name> /bin/sh ls
+/root
+```
   
   
 
