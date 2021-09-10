@@ -21,14 +21,25 @@ http://localhost/hello
 ## Step-4: List Running Containers
 ```
 docker ps
-docker ps -a
-docker ps -a -q
+docker ps -a (lists stopped/Exited containers as well)
+docker ps -a -q 
 ```
 
 ## Step-5: Connect to Container Terminal
 ```
 docker exec -it <container-name> /bin/sh
 ```
+## run commands without loggin into the container
+
+By default docker exec command runs in the same working directory set when container was created.
+
+docker exec -it ubuntu_bash pwd
+
+You can select working directory for the command to execute into
+
+docker exec -it -w /root ubuntu_bash pwd
+  
+  
 
 ## Step-6: Container Stop, Start 
 ```
